@@ -1,6 +1,7 @@
 // connect to websocket server
-const socket = new WebSocket("ws://localhost:3000");
-
+const socket = new WebSocket(
+    location.origin.replace("http", "ws")
+);
 let keyPair;
 
 // generate ECDH keypair when client loads
